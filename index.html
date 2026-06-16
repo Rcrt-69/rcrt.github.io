@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Rémy Couratier</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div id="cursor-glow"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<nav>
+    <div class="nav-logo">RC.</div>
+    <ul class="nav-links">
+        <li><a href="#about">Profil</a></li>
+        <li><a href="#projects">Expériences</a></li>
+        <li><a href="journal.html">Journal</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-primary" style="padding:0.55rem 1.25rem;font-size:0.8rem;">Discutons →</a>
+</nav>
+
+<div class="container">
+
+<section class="hero">
+    <div class="hero-inner">
+        <div class="section-label">Portfolio</div>
+        <h1>
+            Remy<br>
+            <span class="highlight">COURATIER</span><br>
+        </h1>
+        <p class="hero-sub">
+            Étudiant en BTS SIO (SISR). Spécialisation en architecture réseau et sécurité. Objectif : <strong>Trackside IT</strong> en Sport Automobile.
+        </p>
+        <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">Consulter mon parcours</a>
+            <a href="#contact" class="btn btn-outline">Discuter du projet</a>
+        </div>
+    </div>
+</section>
+
+    <section id="about">
+        <div class="section-label"><span>01</span> Profil</div>
+        <div class="about-grid">
+            <div class="about-img-wrap reveal">
+                <div class="about-img-glow"></div>
+                <div class="about-img">
+                    <img src="https://blog.digitalcook.fr/wp-content/uploads/2021/07/Cloud-server.jpg" alt="Serveur Room">
+                </div>
+            </div>
+            <div class="about-text">
+                <h2>L'informatique au service de la <span style="color:var(--accent)">performance.</span></h2>
+                <p class="reveal d1">Basé à Lyon, je m'oriente vers les métiers de l'informatique avec un objectif précis : le <strong>Trackside IT</strong> en sport auto (WEC).</p>
+                <p class="reveal d2">Mon expertise couvre l'administration réseaux, la sécurité des infrastructures et la virtualisation, acquise via ma formation en BTS SIO et mes expériences en milieu professionnel et technique.</p>
+                
+                <div class="skills-list reveal d3">
+                    <span class="skill-tag">Cisco (CCNA en cours)</span>
+                    <span class="skill-tag">VMware & Proxmox</span>
+                    <span class="skill-tag">Linux (Kali, Raspbian)</span>
+                    <span class="skill-tag">Wireshark</span>
+                    <span class="skill-tag">GNS3</span>
+                    <span class="skill-tag">Windows & MacOS</span>
+                    <span class="skill-tag">Sécurité Infra</span>
+                    <span class="skill-tag">IA (Gemini, GPT, Make)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card reveal" style="max-width:720px;margin:3rem auto 0;">
+            <div class="project-shadow"></div>
+            <div class="project-thumb">🏎️</div>
+            <div class="project-body">
+                <div class="project-type">Veille Technologique</div>
+                <div class="project-title">IT en Sport Auto — Comment ça marche dans les stands ?</div>
+                <p class="project-desc">Étude du rôle du Trackside IT Engineer en WEC/F1 : télémétrie temps réel, réseaux fibrés en paddock, gestion de bande passante sur circuit et équipements Cisco/Juniper en conditions dégradées.</p>
+                <div class="project-tags">
+                    <span class="project-tag">WEC</span>
+                    <span class="project-tag">Télémétrie</span>
+                    <span class="project-tag">Trackside IT</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-row">
+            <div class="stat">
+                <div class="stat-number reveal">SISR</div>
+                <div class="stat-label">Spécialisation BTS</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number reveal d1">B1+</div>
+                <div class="stat-label">Niveau d'Anglais</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number reveal d2">2026</div>
+                <div class="stat-label">Réserviste EMSLB</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-label"><span>02</span> Expériences Professionnelles</div>
+        <h2 class="reveal">Parcours <span style="color:var(--accent)">Technique.</span></h2>
+        
+        <div class="projects-grid">
+            <div class="project-card p1 reveal">
+                <div class="project-shadow"></div>
+                <div class="project-thumb">🛡️</div>
+                <div class="project-body">
+                    <div class="project-type">Stage · IT</div>
+                    <div class="project-title">Antenne D-SINS EMSLB</div>
+                    <p class="project-desc">Configuration de switchs et pare-feu, architecture réseaux et maintenance de salle serveur (démantèlement et débarrassage).</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Switching</span>
+                        <span class="project-tag">Firewall</span>
+                        <span class="project-tag">Infrastructure</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card p2 reveal d1">
+                <div class="project-shadow"></div>
+                <div class="project-thumb">📱</div>
+                <div class="project-body">
+                    <div class="project-type">Emploi Étudiant · 2024-2025</div>
+                    <div class="project-title">GonePhone Lyon</div>
+                    <p class="project-desc">Technicien en réparation et reconditionnement. Gestion de la vente, rachat, facturation et logistique.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Hardware</span>
+                        <span class="project-tag">Software</span>
+                        <span class="project-tag">Gestion Client</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card reveal d2">
+                <div class="project-shadow"></div>
+                <div class="project-thumb">🎓</div>
+                <div class="project-body">
+                    <div class="project-type">Formation · En cours</div>
+                    <div class="project-title">Avancement CCNA — Notions de routage avancé</div>
+                    <p class="project-desc">Approfondissement des protocoles de routage dynamique (OSPF), convergence réseau et simulations multi-zones via GNS3 et les modules Cisco NetAcad.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">CCNA</span>
+                        <span class="project-tag">OSPF</span>
+                        <span class="project-tag">GNS3</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card p3 reveal d2">
+                <div class="project-shadow"></div>
+                <div class="project-thumb">✈️</div>
+                <div class="project-body">
+                    <div class="project-type">Stage · Aéronautique</div>
+                    <div class="project-title">Crane Eldec France</div>
+                    <p class="project-desc">Contrôle qualité de pièces aéronautiques, soudure de connecteurs et gestion du conditionnement.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Qualité</span>
+                        <span class="project-tag">Soudure</span>
+                        <span class="project-tag">Précision</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+       <section id="contact">
+        <div class="section-label"><span>03</span> Contact</div>
+        <div class="contact-wrap reveal">
+            <h2>Prêt pour une nouvelle <span style="color:var(--accent)">mission</span> ?</h2>
+            
+            <a href="mailto:remy.couratier69500@gmail.com" class="contact-email">
+            remy.couratier69500@gmail.com
+            </a> <br>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin-bottom: 2rem;">
+                <span>📞</span>
+                <span style="color:var(--text);">+33 07 88 55 27 37</span>
+            </div>
+
+           <!-- Le mail
+             <div class="social-links">
+                <a href="#" class="social-link" title="LinkedIn">in</a>
+                <a href="#" class="social-link" title="GitHub">gh</a>
+            </div> -->
+        </div>
+    </section>
+</div>
+
+<footer>
+    <span>© 2025 Rémy Couratier. Lyon, France.</span>
+    <span>SISR & Infrastructure | Sport Auto Enthusiast</span>
+</footer>
+
+<script>
+    const glow = document.getElementById('cursor-glow');
+    document.addEventListener('mousemove', e => {
+        glow.style.left = e.clientX + 'px';
+        glow.style.top  = e.clientY + 'px';
+    });
+
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const r = card.getBoundingClientRect();
+            const x = ((e.clientX - r.left) / r.width  * 100).toFixed(1) + '%';
+            const y = ((e.clientY - r.top)  / r.height * 100).toFixed(1) + '%';
+            card.style.setProperty('--mx', x);
+            card.style.setProperty('--my', y);
+        });
+    });
+
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal, .stat-number').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
