@@ -1,167 +1,229 @@
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Rémy Couratier</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div id="cursor-glow"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
 
-:root {
-  --bg: #050507; /* Fond plus profond du 1er style */
-  --surface: #0a0b10;
-  --card: #0f111a;
-  --border: rgba(255,255,255,0.08);
-  --text: #f0f1f5;
-  --muted: #8e92a4;
-  
-  /* Palette Bleue issue du 1er style proposé */
-  --accent: #14214b; 
-  --accent-light: #2a3d7a;
-  --glow-blue: rgba(20, 33, 75, 0.4);
-  
-  --font-display: 'Syne', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
-}
+<nav>
+    <div class="nav-logo">RC.</div>
+    <ul class="nav-links">
+        <li><a href="#about">Profil</a></li>
+        <li><a href="#projects">Expériences</a></li>
+        <li><a href="journal.html">Journal</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-primary" style="padding:0.55rem 1.25rem;font-size:0.8rem;">Discutons →</a>
+</nav>
 
-html { scroll-behavior: smooth; }
+<div class="container">
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--font-body);
-  font-weight: 300;
-  line-height: 1.7;
-  overflow-x: hidden;
-}
+<section class="hero">
+    <div class="hero-inner">
+        <div class="section-label">Portfolio</div>
+        <h1>
+            Remy<br>
+            <span class="highlight">COURATIER</span><br>
+        </h1>
+        <p class="hero-sub">
+            Étudiant en BTS SIO (SISR). Spécialisation en architecture réseau et cybersécurité. Objectif : <strong>Trackside IT</strong> en Sport Automobile.
+        </p>
+        <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">Consulter mon parcours</a>
+            <a href="#contact" class="btn btn-outline">Discuter du projet</a>
+        </div>
+    </div>
+</section>
 
-body::before {
-  content: '';
-  position: fixed; inset: 0; z-index: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-  opacity: 0.4;
-  pointer-events: none;
-}
+    <section id="about">
+        <div class="section-label"><span>01</span> Profil</div>
+        <div class="about-grid">
+            <div class="about-img-wrap reveal">
+                <div class="about-img-glow"></div>
+                <div class="about-img">
+                    <img src="https://blog.digitalcook.fr/wp-content/uploads/2021/07/Cloud-server.jpg" alt="Serveur Room">
+                </div>
+            </div>
+            <div class="about-text">
+                <h2>L'informatique au service de la <span style="color:var(--accent)">performance.</span></h2>
+                <p class="reveal d1">Basé à Lyon, je m'oriente vers les métiers de l'informatique avec un objectif précis : le <strong>Trackside IT</strong> en sport auto (WEC).</p>
+                <p class="reveal d2">Mon expertise couvre l'administration réseaux, la sécurité des infrastructures et la virtualisation, acquise via ma formation en BTS SIO et mes expériences en milieu professionnel et technique.</p>
+                
+                <div class="skills-list reveal d3">
+                    <span class="skill-tag">Cisco (CCNA en cours)</span>
+                    <span class="skill-tag">VMware & Proxmox</span>
+                    <span class="skill-tag">Linux (Kali, Raspbian)</span>
+                    <span class="skill-tag">Wireshark</span>
+                    <span class="skill-tag">GNS3</span>
+                    <span class="skill-tag">Windows & MacOS</span>
+                    <span class="skill-tag">Sécurité Infra</span>
+                    <span class="skill-tag">IA (Gemini, GPT, Make)</span>
+                    <span class="skill-tag">Stormshield</span>
+                    <span class="skill-tag">Cybersécurité</span>
+                </div>
+            </div>
+        </div>
+  <div class="stats-row">
+            <div class="stat">
+                <div class="stat-number reveal">SISR</div>
+                <div class="stat-label">Spécialisation BTS</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number reveal d1">B1+</div>
+                <div class="stat-label">Niveau d'Anglais</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number reveal d2">Linux</div>
+                <div class="stat-label">User</div>
+            </div>
+        </div>
+    </section>
 
-.orb {
-  position: fixed; border-radius: 50%;
-  filter: blur(80px); opacity: 0.22;
-  pointer-events: none; z-index: 0;
-  animation: drift 20s ease-in-out infinite alternate;
-}
-/* Orbes avec les nouveaux bleus */
-.orb-1 { width: 600px; height: 600px; background: var(--accent); top: -200px; right: -150px; }
-.orb-2 { width: 500px; height: 500px; background: var(--accent-light); bottom: 10%; left: -150px; animation-delay: -8s; }
-.orb-3 { width: 400px; height: 400px; background: var(--accent); top: 40%; right: 20%; animation-delay: -15s; }
+    <section id="projects">
+        <div class="section-label"><span>02</span> Expériences Professionnelles</div>
+        <h2 class="reveal">Parcours <span style="color:var(--accent)">Technique.</span></h2>
 
-@keyframes drift {
-  from { transform: translate(0, 0) scale(1); }
-  to   { transform: translate(40px, 30px) scale(1.08); }
-}
+        <div class="projects-grid">
+            <div class="project-card p1 reveal">
+                <div class="project-shadow"></div>
+                <div class="project-thumb">💻​</div>
+                <div class="project-body">
+                    <div class="project-type">Stage · Dev</div>
+                    <div class="project-title">R.O.A.R</div>
+                    <p class="project-desc">Dévelopement de site Web, mise en place d'infrastructure, création de produit digital</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Digital</span>
+                        <span class="project-tag">Dev</span>
+                        <span class="project-tag">Infrastructure</span>
+                    </div>
+                </div>
+            </div>
 
-.container { max-width: 1140px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1; }
+            <div class="project-card p1 reveal">
+                <div class="project-shadow"></div>
+                <div class="project-thumb">🛡️</div>
+                <div class="project-body">
+                    <div class="project-type">Stage · IT</div>
+                    <div class="project-title">Antenne D-SINS EMSLB</div>
+                    <p class="project-desc">Configuration de switchs et pare-feu, architecture réseaux et maintenance de salle serveur (démantèlement et débarrassage).</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Switching</span>
+                        <span class="project-tag">Firewall</span>
+                        <span class="project-tag">Infrastructure</span>
+                    </div>
+                </div>
+            </div>
 
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  padding: 1.25rem 2rem;
-  display: flex; align-items: center; justify-content: space-between;
-  background: rgba(5, 5, 7, 0.8);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
-}
+            <div class="project-card p2 reveal d1">
+                <div class="project-shadow"></div>
+                <div class="project-thumb">📱</div>
+                <div class="project-body">
+                    <div class="project-type">Emploi Étudiant · 2024-2025</div>
+                    <div class="project-title">GonePhone Lyon</div>
+                    <p class="project-desc">Technicien en réparation et reconditionnement. Gestion de la vente, rachat, facturation et logistique.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Hardware</span>
+                        <span class="project-tag">Software</span>
+                        <span class="project-tag">Gestion Client</span>
+                    </div>
+                </div>
+            </div>
 
-.nav-logo { font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; color: #fff; }
-.nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a {
-  color: var(--muted); text-decoration: none; font-size: 0.875rem;
-  letter-spacing: 0.08em; text-transform: uppercase;
-  transition: color 0.3s;
-}
-.nav-links a:hover { color: var(--text); }
+            <div class="project-card reveal d2">
+                <div class="project-shadow"></div>
+                <div class="project-thumb">🎓</div>
+                <div class="project-body">
+                    <div class="project-type">Formation · En cours</div>
+                    <div class="project-title">Avancement CCNA — Notions de routage avancé</div>
+                    <p class="project-desc">Approfondissement des protocoles de routage dynamique (OSPF), convergence réseau et simulations multi-zones via GNS3 et les modules Cisco NetAcad.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">CCNA</span>
+                        <span class="project-tag">OSPF</span>
+                        <span class="project-tag">GNS3</span>
+                    </div>
+                </div>
+            </div>
 
-/* HERO */
-.hero { min-height: 100vh; display: flex; align-items: center; padding-top: 5rem; }
-.hero-tag {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  background: rgba(20, 33, 75, 0.2); border: 1px solid rgba(20, 33, 75, 0.4);
-  color: var(--text); font-size: 0.75rem; padding: 0.4rem 1rem; border-radius: 100px; margin-bottom: 2rem;
-}
-.hero h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(3rem, 7vw, 6rem); line-height: 1.0; }
+            <div class="project-card p3 reveal d2">
+                <div class="project-shadow"></div>
+                <div class="project-thumb">✈️</div>
+                <div class="project-body">
+                    <div class="project-type">Stage · Aéronautique</div>
+                    <div class="project-title">Crane Eldec France</div>
+                    <p class="project-desc">Contrôle qualité de pièces aéronautiques, soudure de connecteurs et gestion du conditionnement.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Qualité</span>
+                        <span class="project-tag">Soudure</span>
+                        <span class="project-tag">Précision</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-/* Dégradé de texte du 1er style */
-.highlight { 
-    background: linear-gradient(135deg, #fff, var(--accent-light)); 
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
-}
+       <section id="contact">
+        <div class="section-label"><span>03</span> Contact</div>
+        <div class="contact-wrap reveal">
+            <h2>Prêt pour une nouvelle <span style="color:var(--accent)">mission</span> ?</h2>
+            
+            <a href="mailto:remy.couratier69500@gmail.com" class="contact-email">
+            remy.couratier69500@gmail.com
+            </a> <br>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin-bottom: 2rem;">
+                <span>📞</span>
+                <span style="color:var(--text);">+33 07 88 55 27 37</span>
+            </div>
 
-.hero-sub { margin-top: 1.5rem; color: var(--muted); font-size: 1.125rem; max-width: 520px; }
-.hero-cta { margin-top: 3rem; display: flex; gap: 1rem; }
+           <!-- Le mail
+             <div class="social-links">
+                <a href="#" class="social-link" title="LinkedIn">in</a>
+                <a href="#" class="social-link" title="GitHub">gh</a>
+            </div> -->
+        </div>
+    </section>
+</div>
 
-/* BOUTONS */
-.btn { padding: 0.85rem 2rem; border-radius: 6px; text-decoration: none; transition: 0.3s; font-size: 0.875rem; }
-.btn-primary { 
-    background: var(--accent); 
-    color: #ffffff; 
-    font-weight: 700; 
-    border: 1px solid var(--accent);
-}
-.btn-primary:hover {
-    box-shadow: 0 0 20px var(--glow-blue);
-}
-.btn-outline { border: 1px solid var(--border); color: var(--text); }
-.btn:hover { transform: translateY(-2px); }
+<footer>
+    <span>© 2025 Rémy Couratier. Lyon, France.</span>
+    <span>SISR & Infrastructure | Sport Auto Enthusiast</span>
+</footer>
 
-/* SECTIONS */
-section { padding: 7rem 0; }
-.section-label { color: var(--accent-light); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.2em; margin-bottom: 3rem; display: flex; align-items: center; gap: 1rem; }
-.section-label::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, var(--border), transparent); }
-h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 1.5rem; }
+<script>
+    const glow = document.getElementById('cursor-glow');
+    document.addEventListener('mousemove', e => {
+        glow.style.left = e.clientX + 'px';
+        glow.style.top  = e.clientY + 'px';
+    });
 
-/* ABOUT */
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-.about-img img { width: 100%; height: auto; display: block; }
-.about-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.about-img { width: 100%; aspect-ratio: 4/5; background: var(--card); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 5rem; position: relative; }
-.about-img-glow { position: absolute; inset: -1px; background: linear-gradient(135deg, var(--accent), var(--accent-light)); border-radius: 13px; z-index: -1; opacity: 0.5; }
-.skills-list { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.skill-tag { padding: 0.35rem 0.9rem; background: var(--surface); border: 1px solid var(--border); border-radius: 100px; font-size: 0.8rem; color: var(--muted); }
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const r = card.getBoundingClientRect();
+            const x = ((e.clientX - r.left) / r.width  * 100).toFixed(1) + '%';
+            const y = ((e.clientY - r.top)  / r.height * 100).toFixed(1) + '%';
+            card.style.setProperty('--mx', x);
+            card.style.setProperty('--my', y);
+        });
+    });
 
-/* PROJECTS/EXPERIENCES */
-.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
-.project-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; transition: 0.4s; position: relative; }
-.project-card:hover { transform: translateY(-10px); border-color: var(--accent-light); }
-.project-thumb { height: 150px; background: var(--surface); border-radius: 8px; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
-.project-type { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; }
-.project-title { font-family: var(--font-display); font-size: 1.25rem; margin: 0.5rem 0; }
-.project-desc { font-size: 0.875rem; color: var(--muted); margin-bottom: 1rem; }
-.project-tag { font-size: 0.7rem; padding: 0.2rem 0.5rem; background: rgba(255,255,255,0.05); border-radius: 4px; margin-right: 0.3rem; }
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.15 });
 
-/* STATS */
-.stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 5rem; }
-.stat { border-left: 1px solid var(--border); padding-left: 2rem; }
-.stat-number { font-family: var(--font-display); font-weight: 800; font-size: 2.5rem; color: #fff; }
-
-/* CONTACT */
-.contact-wrap {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 24px;
-    padding: 4rem 2rem; 
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    text-align: center;
-}
-
-.contact-email { font-family: var(--font-display); font-size: clamp(1rem, 4vw, 2.2rem); color: #fff; border-bottom: 2px solid var(--accent); text-decoration: none; font-weight: 800; display: inline-block; width: 100%; text-align: center; margin: 2rem 0; word-break: break-all; }
-.contact-email:hover { color: var(--accent-light); }
-
-/* FOOTER */
-footer { padding: 2rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--muted); }
-
-/* Halo de curseur réglé sur le nouveau bleu */
-#cursor-glow { position: fixed; pointer-events: none; z-index: 9999; width: 300px; height: 300px; background: radial-gradient(circle, rgba(20, 33, 75, 0.15), transparent 70%); transform: translate(-50%,-50%); }
-
-.reveal { opacity: 0; transform: translateY(30px); transition: 0.7s; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-
-@media (max-width: 768px) {
-  .about-grid, .stats-row { grid-template-columns: 1fr; }
-  .nav-links { display: none; }
-}
-
+    document.querySelectorAll('.reveal, .stat-number').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
